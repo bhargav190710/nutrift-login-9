@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Profile | NutriScan</title>
+    <link rel="stylesheet" href="updateprofile.css">
+    </head>
+<body>
+    <div class="dashboard-container">
+        <div class="profile-card">
+            <h2>Update Your Stats</h2>
+            <form id="updateProfileForm">
+                <div class="stat-box">
+                    <label>Age</label>
+                    <input type="number" id="updateAge" required>
+                </div>
+                <div class="stat-box">
+                    <label>Height (cm)</label>
+                    <input type="number" id="updateHeight" required>
+                </div>
+                <div class="stat-box">
+                    <label>Weight (kg)</label>
+                    <input type="number" id="updateWeight" required>
+                </div>
+                <button type="submit" class="edit-btn">Save Changes</button>
+                <a href="dashboard.html" style="display:block; margin-top:10px;">Cancel</a>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="updateProfile.js"></script>
+</body>
+</html>

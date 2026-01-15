@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Forest - Complete Profile</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Complete Your Profile</h2>
+            <p>Help us personalize your experience</p>
+            
+            <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="John" required>
+            </div>
+
+            <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Doe" required>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="25">
+                </div>
+                <div class="input-group">
+                    <label for="gender">Gender</label>
+                    <input type="text" id="gender" placeholder="e.g. Non-binary">
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <div class="input-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" placeholder="180">
+                </div>
+                <div class="input-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="75">
+                </div>
+            </div>
+
+            <button id="saveProfileBtn">Save Profile</button>
+            <div id="message"></div>
+        </div>
+    </div>
+    <script type="module" src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container & Card */
+.dashboard-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.profile-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #2e7d32; /* Deep Forest Green */
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Form Styling */
+.stat-box {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4caf50;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #66bb6a;
+    background-color: #f1f8e9;
+}
+
+/* Buttons and Links */
+.edit-btn {
+    width: 100%;
+    background-color: #43a047;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.edit-btn:hover {
+    background-color: #2e7d32;
+    transform: translateY(-2px);
+}
+
+.edit-btn:active {
+    transform: translateY(0);
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #c62828; /* Soft red for cancel/back */
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+        align-items: flex-start; /* Better for scrolling on small screens */
+        padding-top: 10%;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

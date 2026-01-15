@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriScan - Goal Planner</title>
+  <link rel="stylesheet" href="goal.css">
+</head>
+<body>
+
+  <main class="goal-page">
+    <section class="goal-card">
+      <h2>Weight & Muscle Goal Planner</h2>
+      <p>Set your target and get personalized daily nutrition requirements.</p>
+      
+      <div class="goal-form">
+        <div class="field">
+          <label>Current Weight (kg)</label>
+          <input type="number" id="currentWeight" placeholder="Auto from profile" disabled>
+        </div>
+        <div class="field">
+          <label>Target Weight (kg)</label>
+          <input type="number" id="goalWeight" placeholder="e.g. 70">
+        </div>
+        <div class="field">
+          <label>Time Period (days)</label>
+          <input type="number" id="goalDays" placeholder="e.g. 90">
+        </div>
+        <div class="field">
+          <label>Goal Type</label>
+          <select id="goalType">
+            <option value="lose">Lose Weight</option>
+            <option value="gain">Gain Weight</option>
+            <option value="muscle">Build Muscle</option>
+          </select>
+        <div class="goal-form">
+  <button id="calcGoalBtn" class="btn-add-global">Calculate Plan</button>
+  
+  <button type="button" id="skipBtn" class="btn-skip">Skip for Now</button>
+</div>
+      
+
+      <div class="goal-results" id="goalResultsSection" style="display: none;">
+        <h3>Your Daily Targets</h3>
+        <p id="goalNote"></p>
+        <ul>
+          <li>Calories: <span id="goalCalories">0 kcal/day</span></li>
+          <li>Protein: <span id="goalProtein">0 g</span></li>
+          <li>Fats: <span id="goalFats">0 g</span></li>
+          <li>Fiber: <span id="goalFiber">0 g</span></li>
+        </ul>
+        <button id="saveGoalBtn" class="btn-add-global" style="margin-top: 20px; background-color: #28a745; display: none;">Save Goal to Profile</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="goal.js"></script>
+</body>
+</html>

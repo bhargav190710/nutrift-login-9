@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.1);
+    border: 1px solid #c8e6c9;
+}
+
+h2 {
+    color: #1b5e20;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e8f5e9;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #66bb6a;
+    background-color: #fafdfa;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Status Messages */
+#message {
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+    display: none; /* Hidden until triggered */
+}
+
+.success-msg {
+    display: block !important;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.error-msg {
+    display: block !important;
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+/* Styling for the Sign Up redirection */
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
+
+.signup-link a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.signup-link a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+ /* Special styling for daily nutrition data */
+        .nutrition-macro {
+            font-weight: bold;
+            color: #2e7d32;
+            font-size: 1.1em;
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border-left: 4px solid #4caf50;
+            margin: 4px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nutrition-macro:hover {
+            transform: scale(1.02);
+            transition: all 0.2s ease;
+        }
+        
+        #statsDisplay p {
+            margin: 6px 0;
+        }

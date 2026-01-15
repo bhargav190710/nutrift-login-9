@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriScan | Calorie Finder</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">Nutri<span>Scan</span></div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links" id="nav-list">
+            <li class="user-greeting">Hi, <span id="userNameDisplay">Guest</span>!</li>
+            <li><a href="dashboard.html">My Profile</a></li>
+            <li><a href="diary.html">Diary</a></li>
+            <li><button id="logoutBtn" class="btn-logout">Logout</button></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>Track Every Bite.</h1>
+        <p>Search over 500,000 foods instantly.</p>
+        <div class="search-container">
+            <div class="input-wrapper">
+                <input type="text" id="foodInput" placeholder="Search global or your foods..." autocomplete="off">
+                <div id="suggestionsBox" class="suggestions-box"></div>
+            </div>
+            <button type="button" id="searchBtn">Search</button>
+        </div>
+        <button id="openCreateModal" class="btn-create-custom-hero">+ Create Custom Food</button>
+    </div>
+</header>
+
+<section class="results-container">
+    <div class="result-card">
+        <div class="result-header">
+            <div class="food-info-main">
+                <h2 id="foodName">Food Name</h2>
+                <div class="weight-selector">
+                    <input type="number" id="foodWeight" value="100">
+                    <span>grams (g)</span>
+                </div>
+            </div>
+            <div class="total-calories">
+                <div id="calories">0</div>
+                <span>kcal</span>
+            </div>
+        </div>
+        
+        <div class="macro-grid">
+            <div class="macro-item">
+                <div class="label">Protein</div>
+                <div class="bar-bg"><div class="bar-fill protein" style="width: 0%;"></div></div>
+                <div class="value">0g</div>
+            </div>
+            <div class="macro-item">
+                <div class="label">Carbs</div>
+                <div class="bar-bg"><div class="bar-fill carbs" style="width: 0%;"></div></div>
+                <div class="value">0g</div>
+            </div>
+            <div class="macro-item">
+                <div class="label">Fats</div>
+                <div class="bar-bg"><div class="bar-fill fats" style="width: 0%;"></div></div>
+                <div class="value">0g</div>
+            </div>
+            <div class="macro-item">
+                 <div class="label">Fiber</div>
+                 <div class="bar-bg"><div class="bar-fill fiber" style="width: 0%;"></div></div>
+                 <div class="value" id="fiberValue">0g</div>
+             </div>
+        </div>
+        <button class="btn-add-global">Add to Daily Log</button>
+    </div>
+</section>
+
+<section class="daily-progress-container">
+    <div class="progress-card">
+        <div class="progress-header">
+            <h3>Today's Progress</h3>
+            <a href="diary.html" class="view-diary-link">View Diary →</a>
+        </div>
+        <div class="progress-main-stats">
+            <div class="stat-group">
+                <span class="stat-label">Calories Consumed</span>
+                <div class="main-calories">
+                    <span id="daily-cal-used">0</span> <small>/ <span id="daily-cal-goal">2000</span> kcal</small>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg"><div id="daily-cal-bar" class="progress-fill"></div></div>
+            </div>
+        </div>
+        <div class="daily-macros-grid">
+    <div class="macro-pill pro">
+        <span class="label">Protein</span>
+        <strong id="daily-pro">0.0g</strong>
+    </div>
+    <div class="macro-pill carb">
+        <span class="label">Carbs</span>
+        <strong id="daily-carb">0.0g</strong>
+    </div>
+    <div class="macro-pill fat">
+        <span class="label">Fats</span>
+        <strong id="daily-fat">0.0g</strong>
+    </div>
+    <div class="macro-pill fib">
+        <span class="label">Fiber</span>
+        <strong id="daily-fib">0.0g</strong>
+    </div>
+</div>
+    </div>
+</section>
+
+<section class="custom-library-container">
+    <div class="library-card">
+        <div class="library-header"><h3>My Custom Foods</h3></div>
+        <div id="customFoodLibrary" class="library-grid">
+            <p class="empty-msg">No custom foods created yet.</p>
+        </div>
+    </div>
+</section>
+
+<div id="createFoodModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Create Custom Food</h2>
+        <form id="customFoodForm">
+            <input type="text" id="customName" placeholder="Food Name" required>
+            <div class="input-row">
+                <input type="number" id="customWeight" placeholder="Weight (g)" required>
+                <input type="number" id="customCal" placeholder="Calories" required>
+            </div>
+            <div class="input-grid">
+                <input type="number" id="customPro" placeholder="Protein (g)" step="0.1">
+                <input type="number" id="customCarb" placeholder="Carbs (g)" step="0.1">
+                <input type="number" id="customFat" placeholder="Fats (g)" step="0.1">
+                <input type="number" id="customFib" placeholder="Fiber (g)" step="0.1">
+            </div>
+            <button type="submit" class="btn-add-global" style="margin-top:20px;">Save & Log</button>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="home.js"></script>
+</body>
+</html>
